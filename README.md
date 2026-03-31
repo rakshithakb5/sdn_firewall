@@ -5,6 +5,10 @@
 To implement an SDN-based firewall that blocks traffic from a specific host (h3) while allowing communication between other hosts.
 
 ---
+## What is SDN?
+Software Defined Networking (SDN) separates the control plane from the data plane, allowing centralized control of network behavior using a controller.
+
+--- 
 
 ## Tools Used
 
@@ -13,7 +17,6 @@ To implement an SDN-based firewall that blocks traffic from a specific host (h3)
 * OpenFlow Protocol
 * iperf (for performance testing)
 
----
 
 ## Topology
 
@@ -22,8 +25,7 @@ Single switch topology with 3 hosts:
 * h1
 * h2
 * h3
-
----
+I used Mininet to create a topology with 3 hosts and 1 switch. The switch is controlled by a POX controller using the OpenFlow protocol.
 
 ## Implementation
 
@@ -33,7 +35,7 @@ The controller handles PacketIn events and applies the following logic:
 * Traffic from other ports is allowed
 * Flow rules are installed dynamically using OpenFlow
 
----
+
 
 ## Execution Steps
 
